@@ -15,7 +15,9 @@ FAQ = {
   "Can the assistant change my files without asking?": "By default it previews edits and commands and waits for approval, except commands on your project's allowed list. Approvals have no countdown and return after a page refresh while the app remains open. Allow Auto-Approval is an optional per-project setting for reversible file edits and detected tests plus exact configured build/check commands. Deletions, moves, commits and other unrestricted commands still ask. File changes are backed up; commands can affect your PC and should be trusted.",
   "Can the assistant send emails on its own?": "No. Gmail and advanced IMAP/SMTP connections can search, read, summarize and prepare drafts; the Outlook extension currently reads mail only. Sending requires your Send button and confirmation of the recipients, subject and body. Project Auto-Approval does not authorize email sending. External emails are treated as untrusted content.",
   "How do extensions connect?": "The development build includes ten service adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app's Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline.",
-  "Are the specialist roles separate expert models?": "No. The 82 roles guide your selected local model using focused instructions. Auto chooses a role locally, without an extra routing model call. A specialist consultation makes one additional model call with the supplied context. Responses depend on the model and information available; advanced or practical work may need current references or qualified review."
+  "Are the specialist roles separate expert models?": "No. The 82 roles guide your selected local model using focused instructions. Auto chooses a role locally, without an extra routing model call. A specialist consultation makes one additional model call with the supplied context. Responses depend on the model and information available; advanced or practical work may need current references or qualified review.",
+  "Can I save, archive or delete chats?": "The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account.",
+  "Are settings grouped into tabs?": "Yes. Assistant, Models & speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category."
 }
 description = "Coming soon: Offline Coder for Windows, with local coding, learning and practical guidance, 82 specialist roles, categorized extensions and optional project Auto-Approval."
 path = ROOT / "index.html"
@@ -29,6 +31,8 @@ software["description"] = description
 software["softwareVersion"] = "1.0.0-development"
 software["featureList"] = [
     "Local AI chat and project tools",
+    "Locally saved chats with automatic topic titles, search, rename, archive, restore and confirmed deletion",
+    "Seven categorized Settings tabs with immediate switching and retained input values",
     "82 categorized specialist roles for coding, learning, science, arts, practical skills, health education and animal care",
     "Offline Crisis help panel independent of model inference; limited English urgent self-harm phrase response",
     "Local Auto routing without another model call",
@@ -44,6 +48,8 @@ software["featureList"] = [
     "Background status checks and coalesced interface updates",
     "Repeated failure prevention and Python/PowerShell proposal syntax checks"
 ]
+software['screenshot'] = ['https://renegade-android.github.io/OfflineCoder/img/' + name for name in
+    ['agent-summary.webp', 'settings-models.webp', 'saved-chats.webp', 'coding-tests.webp']]
 faq_data = next(item for item in data["@graph"] if item["@type"] == "FAQPage")
 known = {item["name"]: item for item in faq_data["mainEntity"]}
 for question, answer in FAQ.items():

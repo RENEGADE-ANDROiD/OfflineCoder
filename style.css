@@ -90,6 +90,9 @@ h3 { margin: 0 0 6px; font: 700 17px var(--mono); color: var(--amber); text-tran
 .gallery figure.wide { grid-column: 1 / -1; }
 .gallery a.zoom { background: #000; cursor: zoom-in; display: flex; align-items: center; justify-content: center; }
 .gallery figcaption { margin-top: 10px; color: var(--dim); font-size: 15px; }
+.gallery video, .gallery > figure > img { width: 100%; height: auto; background: #000; }
+.gif-controls { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 12px; }
+.gif-controls .btn { padding: 8px 13px; font-size: 14px; }
 
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 .card { background: var(--panel); border: 1px solid var(--line); padding: 22px; }

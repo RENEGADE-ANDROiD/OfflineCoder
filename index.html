@@ -49,6 +49,8 @@
       "processorRequirements": "x64",
       "featureList": [
         "Local AI chat and project tools",
+        "Locally saved chats with automatic topic titles, search, rename, archive, restore and confirmed deletion",
+        "Seven categorized Settings tabs with immediate switching and retained input values",
         "82 categorized specialist roles for coding, learning, science, arts, practical skills, health education and animal care",
         "Offline Crisis help panel independent of model inference; limited English urgent self-harm phrase response",
         "Local Auto routing without another model call",
@@ -65,10 +67,10 @@
         "Repeated failure prevention and Python/PowerShell proposal syntax checks"
       ],
       "screenshot": [
-        "https://renegade-android.github.io/OfflineCoder/img/agent-approval.webp",
         "https://renegade-android.github.io/OfflineCoder/img/agent-summary.webp",
         "https://renegade-android.github.io/OfflineCoder/img/settings-models.webp",
-        "https://renegade-android.github.io/OfflineCoder/img/synthwave-stop.webp"
+        "https://renegade-android.github.io/OfflineCoder/img/saved-chats.webp",
+        "https://renegade-android.github.io/OfflineCoder/img/coding-tests.webp"
       ],
       "image": "https://renegade-android.github.io/OfflineCoder/img/og-image.png",
       "author": {
@@ -184,6 +186,22 @@
             "@type": "Answer",
             "text": "Offline Coder is coming soon. This website previews the development build; public downloads and the final price will be announced at launch. Optional service connections still need live account validation and applicable Google verification before release."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I save, archive or delete chats?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are settings grouped into tabs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Assistant, Models & speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category."
+          }
         }
       ]
     },
@@ -201,7 +219,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" as="image" href="img/agent-approval.webp" type="image/webp">
-  <link rel="stylesheet" href="style.css?v=20261009">
+  <link rel="stylesheet" href="style.css?v=20261009-media">
 </head>
 <body class="">
   <a class="skip" href="#main">Skip to content</a>
@@ -231,7 +249,7 @@
         <p class="fineprint">Coming soon &middot; Windows 10 / 11 &middot; Portable &middot; Development preview</p>
       </div>
       <figure class="hero-shot">
-        <img src="img/agent-approval.webp" alt="Offline Coder window: the assistant found a bug in inventory.py and shows a one-line diff with Approve and continue and Decline buttons" width="1500" height="950" fetchpriority="high">
+        <img src="img/agent-approval.webp" alt="Offline Coder previews the shopping-cart quantity fix as a one-line diff, with approval and decline controls" width="1175" height="720" fetchpriority="high">
       </figure>
     </section>
 
@@ -247,6 +265,8 @@
         <li><h3>Auto-tune for your PC</h3><p><em>Re-tune for this PC</em> benchmarks your hardware and picks the fastest engine (Vulkan GPU or CPU), context size and threads.</p></li>
         <li><h3>Voice input</h3><p>Click Voice, speak, click Stop. Speech recognition runs locally with whisper.cpp, so your voice stays on your PC too.</p></li>
         <li><h3>Knowledge library import</h3><p>Import your official ChatGPT, Grok or Claude export, or a folder of notes, so answers can draw on your own past conversations. Stored locally.</p></li>
+        <li><h3>Saved conversations</h3><p>Chats save on your PC with automatic topic titles. Start a new chat without losing earlier conversations. Search, rename, archive, restore or delete a chat after confirmation.</p></li>
+        <li><h3>Settings by category</h3><p>Open Assistant, Models &amp; speed, Knowledge, Extensions, Connections, Appearance or Updates directly. Switch tabs without losing your input values.</p></li>
         <li class="specialist-card" id="specialists"><h3>82 specialist roles, organized around your interests</h3>
           <p>Leave Auto on for local topic selection, or choose a role yourself. Each role gives your selected local model focused instructions. A targeted second opinion is available when needed; all roles use your selected model.</p>
           <div class="specialist-grid"><section><h4>General</h4><p>ProgrammingBot, ArchitectBot.</p></section>
@@ -280,20 +300,42 @@
     </section>
 
     <section id="screenshots" class="section">
-      <h2><span class="pix" aria-hidden="true"></span>Screenshots</h2>
-      <p class="hint">Real screenshots from the development build with Qwen3 4B Instruct 2507. Click to enlarge.</p>
+      <h2><span class="pix" aria-hidden="true"></span>See Offline Coder in action</h2>
+      <p class="hint">Fresh captures from the development build. Public release coming soon. Click screenshots to enlarge, or play the walkthroughs below.</p>
       <div class="gallery">
-        <figure>
-          <a href="img/agent-summary.webp" class="zoom"><img src="img/agent-summary.webp" alt="After approval, the assistant summarizes what it changed in inventory.py, how it verified the fix and which tools it used" loading="lazy" decoding="async" width="1500" height="950"></a>
-          <figcaption>After you approve, the assistant explains what changed and how it checked it.</figcaption>
-        </figure>
-        <figure>
-          <a href="img/settings-models.webp" class="zoom"><img src="img/settings-models.webp" alt="Settings panel listing local models: Llama 3.2 3B, Qwen3 8B, Qwen3 4B Instruct 2507 (active) and Qwen2.5-Coder 7B, with RAM detection" loading="lazy" decoding="async" width="1500" height="950"></a>
-          <figcaption>Pick a local model. Offline Coder shows what fits your PC's RAM.</figcaption>
-        </figure>
         <figure class="wide">
-          <a href="img/synthwave-stop.webp" class="zoom"><img src="img/synthwave-stop.webp" alt="Offline Coder in the Synthwave theme while the assistant works on a snake game project, with the red Stop button visible" loading="lazy" decoding="async" width="1500" height="950"></a>
-          <figcaption>Synthwave theme, mid-reply: the Stop button ends a run at any time.</figcaption>
+          <video controls playsinline preload="none" poster="img/coding-video-poster.webp" width="1280" height="764" aria-label="Real local coding demonstration">
+            <source src="media/coding-demo.mp4" type="video/mp4">
+            <track src="media/coding-demo.vtt" kind="captions" srclang="en" label="English" default>
+            <a href="media/coding-demo.mp4">Download the coding demonstration</a>
+          </video>
+          <figcaption><strong>A real local coding run.</strong> Qwen3 4B Instruct finds two failing shopping-cart tests, proposes a one-line quantity fix, waits for approval and passes all four unchanged tests. Edited walkthrough; waiting periods shortened.</figcaption>
+        </figure>
+        <figure>
+          <a href="img/agent-summary.webp" class="zoom"><img src="img/agent-summary.webp" alt="Offline Coder explains the shopping-cart quantity fix and the four passing tests in the new development interface" loading="lazy" decoding="async" width="1100" height="720"></a>
+          <figcaption>The completed fix, its tool activity and the checked result.</figcaption>
+        </figure>
+        <figure>
+          <a href="img/settings-models.webp" class="zoom"><img src="img/settings-models.webp" alt="Models and speed Settings tab with installed models, memory guidance and local engine controls" loading="lazy" decoding="async" width="1100" height="720"></a>
+          <figcaption>Models &amp; speed: choose the local model and manage the engine in one category.</figcaption>
+        </figure>
+        <figure>
+          <a href="img/saved-chats.webp" class="zoom"><img src="img/saved-chats.webp" alt="Saved chats with topic titles and controls to open, rename, archive or delete a conversation" loading="lazy" decoding="async" width="1100" height="720"></a>
+          <figcaption>Saved chats: keep earlier conversations, archive for later or delete after confirmation.</figcaption>
+        </figure>
+        <figure>
+          <a href="img/coding-tests.webp" class="zoom"><img src="img/coding-tests.webp" alt="Actual tool output showing exit code zero and all four shopping-cart tests passing" loading="lazy" decoding="async" width="1100" height="720"></a>
+          <figcaption>Inspect the actual test output and command result in the tool activity.</figcaption>
+        </figure>
+        <figure class="wide gif-demo">
+          <img id="settingsWalkthrough" src="img/settings-walkthrough.webp" data-gif="media/settings-tabs.gif" alt="Walkthrough of the seven categorized Settings tabs" loading="lazy" decoding="async" width="1100" height="764">
+          <div class="gif-controls"><button type="button" class="btn btn-secondary gif-toggle" aria-controls="settingsWalkthrough" aria-pressed="false" data-label="Settings">Play Settings walkthrough</button><a href="media/settings-tabs.gif" download>Download GIF</a></div>
+          <figcaption><strong>Settings, organized.</strong> Move directly between Assistant, Models &amp; speed, Knowledge, Extensions, Connections, Appearance and Updates.</figcaption>
+        </figure>
+        <figure class="wide gif-demo">
+          <img id="appearanceWalkthrough" src="img/appearance-walkthrough.webp" data-gif="media/themes-text-opacity.gif" alt="Walkthrough of eleven themes followed by background opacity, font size and text glow controls" loading="lazy" decoding="async" width="1100" height="764">
+          <div class="gif-controls"><button type="button" class="btn btn-secondary gif-toggle" aria-controls="appearanceWalkthrough" aria-pressed="false" data-label="appearance">Play appearance walkthrough</button><a href="media/themes-text-opacity.gif" download>Download GIF</a></div>
+          <figcaption><strong>Make it your own.</strong> Eleven themes, then background opacity, font size and text glow. Transparency is shown over a labeled sample background in this browser preview.</figcaption>
         </figure>
       </div>
     </section>
@@ -355,6 +397,8 @@
         <details><summary><h3>How do extensions connect?</h3></summary><p>The development build includes ten service adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app&#x27;s Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline.</p></details>
         <details><summary><h3>Are the specialist roles separate expert models?</h3></summary><p>No. The 82 roles guide your selected local model using focused instructions. Auto chooses a role locally, without an extra routing model call. A specialist consultation makes one additional model call with the supplied context. Responses depend on the model and information available; advanced or practical work may need current references or qualified review.</p></details>
         <details><summary><h3>When can I download Offline Coder?</h3></summary><p>Offline Coder is coming soon. This website previews the development build; public downloads and the final price will be announced at launch. Optional service connections still need live account validation and applicable Google verification before release.</p></details>
+        <details><summary><h3>Can I save, archive or delete chats?</h3></summary><p>The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account.</p></details>
+        <details><summary><h3>Are settings grouped into tabs?</h3></summary><p>Yes. Assistant, Models &amp; speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category.</p></details>
       </div>
     </section>
   </main>
@@ -371,6 +415,16 @@
   </dialog>
 
   <script>
+    document.querySelectorAll('.gif-toggle').forEach(function (button) {
+      var img = document.getElementById(button.getAttribute('aria-controls'));
+      var poster = img.getAttribute('src');
+      button.addEventListener('click', function () {
+        var playing = button.getAttribute('aria-pressed') === 'true';
+        img.src = playing ? poster : img.getAttribute('data-gif');
+        button.setAttribute('aria-pressed', String(!playing));
+        button.textContent = (playing ? 'Play ' : 'Stop ') + button.getAttribute('data-label') + ' walkthrough';
+      });
+    });
     // Launch sale: after the end date the page shows the regular price even if build.py was not re-run.
     (function () {
       var end = document.body.getAttribute('data-sale-end');
