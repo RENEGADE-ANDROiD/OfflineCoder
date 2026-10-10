@@ -39,7 +39,7 @@ software["featureList"] = [
     "Approval requests without a countdown and recovery after refresh while the hub stays open",
     "Optional per-project Auto-Approval for reversible edits and test/build/check commands",
     "File backups and undo",
-    "26 categorized extensions: ten optional service adapters and sixteen local instruction packs",
+    "27 categorized extensions: eleven optional service adapters and sixteen local instruction packs",
     "Importable instruction packs with no executable plug-in code",
     "Google sign-in prepared for Gmail, Drive and Calendar; app setup and live account checks required",
     "Encrypted local connection credentials; email sending requires human confirmation",
