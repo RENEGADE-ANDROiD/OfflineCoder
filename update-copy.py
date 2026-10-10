@@ -14,10 +14,11 @@ FAQ = {
   "Is my code or chat history sent anywhere?": "The AI model runs locally, and projects, chats and imported knowledge are stored on your PC. Online research sends search queries to its provider; enabled extensions communicate with the service you connect. Retrieved content is processed by the local model. Connection credentials are encrypted for your Windows account and are not supplied as credentials to the model. Approved commands run with your Windows account and may use the network.",
   "Can the assistant change my files without asking?": "By default it previews edits and commands and waits for approval, except commands on your project's allowed list. Approvals have no countdown and return after a page refresh while the app remains open. Allow Auto-Approval is an optional per-project setting for reversible file edits and detected tests plus exact configured build/check commands. Deletions, moves, commits and other unrestricted commands still ask. File changes are backed up; commands can affect your PC and should be trusted.",
   "Can the assistant send emails on its own?": "No. Gmail and advanced IMAP/SMTP connections can search, read, summarize and prepare drafts; the Outlook extension currently reads mail only. Sending requires your Send button and confirmation of the recipients, subject and body. Project Auto-Approval does not authorize email sending. External emails are treated as untrusted content.",
-  "How do extensions connect?": "The development build includes ten service adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app's Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline.",
+  "How do extensions connect?": "The development build includes twelve connection adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app's Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline. Local Ghidra inspection requires separately installed Ghidra/GhidraMCP. Local MCP connects to one reviewed local HTTP server, with approval for every tool invocation even in Auto-Approval projects.",
   "Are the specialist roles separate expert models?": "No. The 82 roles guide your selected local model using focused instructions. Auto chooses a role locally, without an extra routing model call. A specialist consultation makes one additional model call with the supplied context. Responses depend on the model and information available; advanced or practical work may need current references or qualified review.",
   "Can I save, archive or delete chats?": "The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account.",
-  "Are settings grouped into tabs?": "Yes. Assistant, Models & speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category."
+  "Are settings grouped into tabs?": "Yes. Assistant, Models & speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category.",
+  "Do specialists use the built-in tools automatically?": "The built-in search, outline, syntax, Python lint/type and OCR tools are available when project tools are on, which is the default for opened projects. Specialists are instructed to choose relevant tools without another toggle. Knowledge imports build local meaning search automatically in the background. Model tool choice and diagnostics can still need review. Optional service connections need setup; every Local MCP invocation requires approval, including in Auto-Approval projects."
 }
 description = "Coming soon: Offline Coder for Windows, with local coding, learning and practical guidance, 82 specialist roles, categorized extensions and optional project Auto-Approval."
 path = ROOT / "index.html"
@@ -39,14 +40,17 @@ software["featureList"] = [
     "Approval requests without a countdown and recovery after refresh while the hub stays open",
     "Optional per-project Auto-Approval for reversible edits and test/build/check commands",
     "File backups and undo",
-    "27 categorized extensions: eleven optional service adapters and sixteen local instruction packs",
+    "28 categorized extensions: twelve optional connection adapters and sixteen local instruction packs",
     "Importable instruction packs with no executable plug-in code",
     "Google sign-in prepared for Gmail, Drive and Calendar; app setup and live account checks required",
     "Encrypted local connection credentials; email sending requires human confirmation",
+    "Automatic built-in tool guidance: fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing",
+    "Background local meaning search for imported notes and English image OCR; native OCR distribution review required",
+    "Reviewed local HTTP MCP tools with approval for every invocation",
     "Project code search, visible plans, project notes and focused checks",
     "Voice input, imported knowledge, themes and hardware tuning",
     "Background status checks and coalesced interface updates",
-    "Repeated failure prevention and Python/PowerShell proposal syntax checks"
+    "Repeated failure prevention and Python/PowerShell/JS/TS/C#/Java/Rust/Go proposal syntax checks"
 ]
 software['screenshot'] = ['https://renegade-android.github.io/OfflineCoder/img/' + name for name in
     ['agent-summary.webp', 'settings-models.webp', 'saved-chats.webp', 'coding-tests.webp']]

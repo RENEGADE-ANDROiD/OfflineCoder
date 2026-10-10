@@ -57,14 +57,17 @@
         "Approval requests without a countdown and recovery after refresh while the hub stays open",
         "Optional per-project Auto-Approval for reversible edits and test/build/check commands",
         "File backups and undo",
-        "27 categorized extensions: eleven optional service adapters and sixteen local instruction packs",
+        "28 categorized extensions: twelve optional connection adapters and sixteen local instruction packs",
         "Importable instruction packs with no executable plug-in code",
         "Google sign-in prepared for Gmail, Drive and Calendar; app setup and live account checks required",
         "Encrypted local connection credentials; email sending requires human confirmation",
+        "Automatic built-in tool guidance: fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing",
+        "Background local meaning search for imported notes and English image OCR; native OCR distribution review required",
+        "Reviewed local HTTP MCP tools with approval for every invocation",
         "Project code search, visible plans, project notes and focused checks",
         "Voice input, imported knowledge, themes and hardware tuning",
         "Background status checks and coalesced interface updates",
-        "Repeated failure prevention and Python/PowerShell proposal syntax checks"
+        "Repeated failure prevention and Python/PowerShell/JS/TS/C#/Java/Rust/Go proposal syntax checks"
       ],
       "screenshot": [
         "https://renegade-android.github.io/OfflineCoder/img/agent-summary.webp",
@@ -168,7 +171,7 @@
           "name": "How do extensions connect?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The development build includes ten service adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app's Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline."
+            "text": "The development build includes twelve connection adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app's Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline. Local Ghidra inspection requires separately installed Ghidra/GhidraMCP. Local MCP connects to one reviewed local HTTP server, with approval for every tool invocation even in Auto-Approval projects."
           }
         },
         {
@@ -201,6 +204,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Assistant, Models & speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do specialists use the built-in tools automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The built-in search, outline, syntax, Python lint/type and OCR tools are available when project tools are on, which is the default for opened projects. Specialists are instructed to choose relevant tools without another toggle. Knowledge imports build local meaning search automatically in the background. Model tool choice and diagnostics can still need review. Optional service connections need setup; every Local MCP invocation requires approval, including in Auto-Approval projects."
           }
         }
       ]
@@ -289,10 +300,12 @@
         <li><h3>Crisis help, available without the AI</h3><p>Open the built-in Crisis help panel at any time, including while the model is busy or unavailable. It includes regional human-support contacts that can be viewed offline. A limited English phrase check also responds to explicit urgent self-harm messages without waiting for model inference. This app cannot assess every crisis, monitor safety or dispatch help.</p></li>
         <li><h3>A real agent workflow</h3><p>A visible task plan, project notes it remembers between chats, git status/diff/log and commits, a test runner that finds pytest, npm, dotnet, cargo, go or ctest, multi-file patches with one approval, and background commands for dev servers.</p></li>
         <li><h3>Extensions by specialty</h3><p>Browse coding, education, science, farming, cooking, automotive, engineering, building design, arts, animal care, health and self-reliance packs by category. Sixteen local guidance packs are included, and you can import your own. Packs add instructions to your chosen model, without executable plug-in code.</p></li>
-        <li><h3>Optional service connections</h3><p>The development build includes Gmail, GitHub, GitLab, Notion, Slack, Dropbox, OneDrive, Outlook, Google Drive, Google Calendar and local Ghidra Binary Analysis adapters. Ghidra inspection covers functions, strings, reconstructed code, assembly and references in a program you select; Ghidra and the GhidraMCP plugin are installed separately. Connections stay off until enabled. Google sign-in needs app registration; other online services currently use encrypted access tokens. Provider permissions and live connection checks are required before release.</p></li>
+        <li><h3>Optional service connections</h3><p>The development build includes Gmail, GitHub, GitLab, Notion, Slack, Dropbox, OneDrive, Outlook, Google Drive, Google Calendar local Ghidra Binary Analysis and Local MCP Tools adapters. Ghidra inspection covers functions, strings, reconstructed code, assembly and references in a program you select; Ghidra and the GhidraMCP plugin are installed separately. Local MCP supports one separately installed HTTP server with reviewed tools; every invocation asks approval, including with Auto-Approval. Connections stay off until enabled. Google sign-in needs app registration; other online services currently use encrypted access tokens. Provider permissions and live connection checks are required before release.</p></li>
         <li><h3>Online research and email</h3><p>Optional research can look up current information and cite sources. Gmail can read mail and prepare drafts; sending still requires your Send button and confirmation, even with project Auto-Approval on. Other mail providers retain advanced IMAP/SMTP setup.</p></li>
         <li><h3>Themes and see-through window</h3><p>Eleven themes including Midnight blue, Light paper, Terminal green and Amber CRT, or your own colors. Adjustable font size, a text glow slider, and a background opacity slider that lets your desktop show through while text stays crisp.</p></li>
-        <li><h3>Clearer, more reliable work</h3><p>Chat streams locally, with fewer decorative reactions during tasks. Unchanged failed actions are blocked, proposed Python and PowerShell are syntax-checked, and claims about edits or tests require matching tool evidence. Model answers can still need review.</p></li>
+        <li><h3>Clearer, more reliable work</h3><p>Chat streams locally, with fewer decorative reactions during tasks. Unchanged failed actions are blocked, proposed Python, PowerShell, JavaScript/TypeScript, C#, Java, Rust and Go receive syntax checks, and claims about edits or tests require matching tool evidence. Model answers can still need review.</p></li>
+        <li><h3>Built-in coding checks</h3><p>Specialists are guided to choose fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing without another toggle. Checks help catch mistakes, while focused tests and review still matter.</p></li>
+        <li><h3>Knowledge search by meaning</h3><p>Imported notes build a local meaning-search index automatically in the background, alongside keyword search. Import an image for English OCR. Notes and embeddings stay on your PC; OCR can misread text. Native OCR distribution review remains a release requirement.</p></li>
         <li><h3>More responsive settings</h3><p>Background status checks, cached menus and smoother slider and window updates keep interface work lightweight. Local topic routing avoids an extra model call. Reply speed still depends on your model and PC.</p></li>
         <li><h3>Sparing reactions</h3><p>Add your own reactions. Assistant reactions are occasional in casual conversation and disabled during project tool tasks.</p></li>
         <li><h3>Stop button</h3><p>Request cancellation of a reply or tool task whenever needed. You stay in control of the assistant's work.</p></li>
@@ -386,11 +399,12 @@
         <details><summary><h3>How do updates work?</h3></summary><p>The development build checks this website once a day for a newer version and opens the official download page when an update is announced. Nothing is installed automatically. Public release downloads are coming soon.</p></details>
         <details><summary><h3>Can I use it on more than one PC?</h3></summary><p>Yes. One purchase lets you, as one person, install and use Offline Coder on any computers you own or use. Each person needs their own copy. It is portable: unzip it anywhere, even on a USB drive.</p></details>
         <details><summary><h3>Can the assistant send emails on its own?</h3></summary><p>No. Gmail and advanced IMAP/SMTP connections can search, read, summarize and prepare drafts; the Outlook extension currently reads mail only. Sending requires your Send button and confirmation of the recipients, subject and body. Project Auto-Approval does not authorize email sending. External emails are treated as untrusted content.</p></details>
-        <details><summary><h3>How do extensions connect?</h3></summary><p>The development build includes ten service adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app&#x27;s Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline.</p></details>
+        <details><summary><h3>How do extensions connect?</h3></summary><p>The development build includes twelve connection adapters and sixteen local instruction packs, grouped by specialty. Gmail, Google Drive and Google Calendar use browser-based Google sign-in after the app&#x27;s Google registration is configured. GitHub, GitLab, Notion, Slack, Dropbox, OneDrive and Outlook currently use service access tokens with the required permissions. Tokens stay encrypted on this PC. Live account validation and Google verification remain release requirements; instruction packs work offline. Local Ghidra inspection requires separately installed Ghidra/GhidraMCP. Local MCP connects to one reviewed local HTTP server, with approval for every tool invocation even in Auto-Approval projects.</p></details>
         <details><summary><h3>Are the specialist roles separate expert models?</h3></summary><p>No. The 82 roles guide your selected local model using focused instructions. Auto chooses a role locally, without an extra routing model call. A specialist consultation makes one additional model call with the supplied context. Responses depend on the model and information available; advanced or practical work may need current references or qualified review.</p></details>
         <details><summary><h3>When can I download Offline Coder?</h3></summary><p>Offline Coder is coming soon. This website previews the development build; public downloads and the final price will be announced at launch. Optional service connections still need live account validation and applicable Google verification before release.</p></details>
         <details><summary><h3>Can I save, archive or delete chats?</h3></summary><p>The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account.</p></details>
         <details><summary><h3>Are settings grouped into tabs?</h3></summary><p>Yes. Assistant, Models &amp; speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category.</p></details>
+        <details><summary><h3>Do specialists use the built-in tools automatically?</h3></summary><p>The built-in search, outline, syntax, Python lint/type and OCR tools are available when project tools are on, which is the default for opened projects. Specialists are instructed to choose relevant tools without another toggle. Knowledge imports build local meaning search automatically in the background. Model tool choice and diagnostics can still need review. Optional service connections need setup; every Local MCP invocation requires approval, including in Auto-Approval projects.</p></details>
       </div>
     </section>
   </main>
