@@ -62,7 +62,7 @@
         "Google sign-in prepared for Gmail, Drive and Calendar; app setup and live account checks required",
         "Encrypted local connection credentials; email sending requires human confirmation",
         "Automatic built-in tool guidance: fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing",
-        "Background local meaning search for imported notes and English image OCR; native OCR distribution review required",
+        "Background local meaning search for imported notes and bundled English image OCR",
         "Reviewed local HTTP MCP tools with approval for every invocation",
         "Project code search, visible plans, project notes and focused checks",
         "Voice input, imported knowledge, themes and hardware tuning",
@@ -213,6 +213,14 @@
             "@type": "Answer",
             "text": "The built-in search, outline, syntax, Python lint/type and OCR tools are available when project tools are on, which is the default for opened projects. Specialists are instructed to choose relevant tools without another toggle. Knowledge imports build local meaning search automatically in the background. Model tool choice and diagnostics can still need review. Optional service connections need setup; every Local MCP invocation requires approval, including in Auto-Approval projects."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does image OCR need an online service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The development build bundles an English OCR engine and recognition data. Read project images or import an image into Knowledge without an online OCR account or Windows language-pack setup. PNG, JPEG, BMP and TIFF are supported; only the first frame of a multi-page image is read. Recognition can be wrong, so verify important text."
+          }
         }
       ]
     },
@@ -305,7 +313,7 @@
         <li><h3>Themes and see-through window</h3><p>Eleven themes including Midnight blue, Light paper, Terminal green and Amber CRT, or your own colors. Adjustable font size, a text glow slider, and a background opacity slider that lets your desktop show through while text stays crisp.</p></li>
         <li><h3>Clearer, more reliable work</h3><p>Chat streams locally, with fewer decorative reactions during tasks. Unchanged failed actions are blocked, proposed Python, PowerShell, JavaScript/TypeScript, C#, Java, Rust and Go receive syntax checks, and claims about edits or tests require matching tool evidence. Model answers can still need review.</p></li>
         <li><h3>Built-in coding checks</h3><p>Specialists are guided to choose fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing without another toggle. Checks help catch mistakes, while focused tests and review still matter.</p></li>
-        <li><h3>Knowledge search by meaning</h3><p>Imported notes build a local meaning-search index automatically in the background, alongside keyword search. Import an image for English OCR. Notes and embeddings stay on your PC; OCR can misread text. Native OCR distribution review remains a release requirement.</p></li>
+        <li><h3>Knowledge search by meaning</h3><p>Imported notes build a local meaning-search index automatically in the background, alongside keyword search. Import an image for English OCR. Notes and embeddings stay on your PC; OCR can misread text. The English OCR engine and recognition data are bundled, with no online account or Windows language-pack setup required.</p></li>
         <li><h3>More responsive settings</h3><p>Background status checks, cached menus and smoother slider and window updates keep interface work lightweight. Local topic routing avoids an extra model call. Reply speed still depends on your model and PC.</p></li>
         <li><h3>Sparing reactions</h3><p>Add your own reactions. Assistant reactions are occasional in casual conversation and disabled during project tool tasks.</p></li>
         <li><h3>Stop button</h3><p>Request cancellation of a reply or tool task whenever needed. You stay in control of the assistant's work.</p></li>
@@ -405,6 +413,7 @@
         <details><summary><h3>Can I save, archive or delete chats?</h3></summary><p>The development build saves chats on your PC, separately by project and for general conversations. Titles are generated locally from the chat topic and can be renamed. New chat keeps earlier conversations. Search titles, reopen, archive and restore from Chats. Permanent deletion asks for confirmation. Conversations do not sync to a cloud account.</p></details>
         <details><summary><h3>Are settings grouped into tabs?</h3></summary><p>Yes. Assistant, Models &amp; speed, Knowledge, Extensions, Connections, Appearance and Updates each have their own category tab. Switching categories preserves input values, and shortcuts open the relevant category.</p></details>
         <details><summary><h3>Do specialists use the built-in tools automatically?</h3></summary><p>The built-in search, outline, syntax, Python lint/type and OCR tools are available when project tools are on, which is the default for opened projects. Specialists are instructed to choose relevant tools without another toggle. Knowledge imports build local meaning search automatically in the background. Model tool choice and diagnostics can still need review. Optional service connections need setup; every Local MCP invocation requires approval, including in Auto-Approval projects.</p></details>
+        <details><summary><h3>Does image OCR need an online service?</h3></summary><p>No. The development build bundles an English OCR engine and recognition data. Read project images or import an image into Knowledge without an online OCR account or Windows language-pack setup. PNG, JPEG, BMP and TIFF are supported; only the first frame of a multi-page image is read. Recognition can be wrong, so verify important text.</p></details>
       </div>
     </section>
   </main>

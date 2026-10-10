@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 FAQ = {
+  "Does image OCR need an online service?": "No. The development build bundles an English OCR engine and recognition data. Read project images or import an image into Knowledge without an online OCR account or Windows language-pack setup. PNG, JPEG, BMP and TIFF are supported; only the first frame of a multi-page image is read. Recognition can be wrong, so verify important text.",
   "When can I download Offline Coder?": "Offline Coder is coming soon. This website previews the development build; public downloads and the final price will be announced at launch. Optional service connections still need live account validation and applicable Google verification before release.",
   "Is it a private, offline alternative to ChatGPT or Copilot?": "For everyday coding help, the development build provides local chat, project search, proposed edits and approved commands. Local inference stays on your PC. Optional research, connected services and commands that use the network can communicate online. Smaller local models can require more steps and review for complex work.",
   "Why does Windows SmartScreen show a warning?": "The development executable is not code-signed yet, so Windows can show a publisher or reputation warning. Signing and distribution are still being prepared. Public downloads will open at launch; use only the official download link announced here.",
@@ -45,7 +46,7 @@ software["featureList"] = [
     "Google sign-in prepared for Gmail, Drive and Calendar; app setup and live account checks required",
     "Encrypted local connection credentials; email sending requires human confirmation",
     "Automatic built-in tool guidance: fast project search, structural outlines, Python lint/type diagnostics and multi-language parsing",
-    "Background local meaning search for imported notes and English image OCR; native OCR distribution review required",
+    "Background local meaning search for imported notes and bundled English image OCR",
     "Reviewed local HTTP MCP tools with approval for every invocation",
     "Project code search, visible plans, project notes and focused checks",
     "Voice input, imported knowledge, themes and hardware tuning",
