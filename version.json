@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "url": "https://offlinecoder.pages.dev/",
-  "notes": "Improves Blender scene assembly and preview quality, alongside browser control, image and document tools, procedural textures, and specialist roles. Models, ComfyUI and image checkpoints are separate installations. Extract into a new folder and preserve your user data; existing license keys continue to work."
+  "notes": "Improves large-project code indexing and reliability when controlling slow local browser pages. Includes Blender scene, image and document tools, procedural textures, and specialist roles. Models, ComfyUI and image checkpoints are separate installations. Extract into a new folder and preserve your user data; existing license keys continue to work."
 }
